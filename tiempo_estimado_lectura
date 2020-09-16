@@ -1,0 +1,16 @@
+def reading_time(ruta):
+    f = open(ruta,"r",encoding="utf-8")
+    txt=(f.read().replace(",","").replace(".","")).split(" ")
+    for i in txt:
+        print(i)
+    minutos=len(txt)/265
+    if minutos<1:
+        print("Tiempo de lectura: 1min")
+    else:
+        print("Tiempo de lectura: {min:.2f} min".format(min=minutos))
+    
+
+reading_time("C:\\Users\\raulm\\OneDrive\\Desktop\\Python\\PANDA_CON_ALF\\articulo_markdown.txt")
+reading_time("C:\\Users\\raulm\\OneDrive\\Desktop\\Python\\PANDA_CON_ALF\\articulo_markdown_1.txt")
+
+NOTA: no me funciona el modulo docx que seria lo idoneo para abrir un documento de word y porder detectar las imagenes asi se daria un resultado mas exacto del tiempo de duracion de lectura del documento
